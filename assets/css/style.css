@@ -21,7 +21,7 @@ img{
 
 .container>.card {
     border: 1px solid lightgray;
-    box-shadow: 0 0 10px #ababab;
+    box-shadow: 4px 4px 15px 2px #ababab;
 }
 
 .img_main{
