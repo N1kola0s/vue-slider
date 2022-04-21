@@ -19,51 +19,48 @@
 
     <div id="app">
 
-        <div class="container">
+        <div class="container mt-5">
 
-            <div class="card">
+            <div class="card d-flex flex-row">
 
-                <div class="row">
+               
 
-                    <div class="col-8 ">
+                <div class="col-10 position-relative">
 
-                        <img class="img_main position-absolute" :src="place[counter].image" alt="'photo' + place[counter].title">
-                        <!-- /.img_main -->
+                    <img class="img_main" :src="place[counter].image" alt="'photo' + place[counter].title">
+                    <!-- /.img_main -->
 
-                        <div class="img_description position-relative text-white">
-                            <h4>{{place[counter].title}}</h4>
-                            <div>{{place[counter].text}}</div>
-    
-                        </div>
-                        <!-- /.img_description -->
+                    <div class="img_description position-absolute text-white">
+                        <h4>{{place[counter].title}}</h4>
+                        <div>{{place[counter].text}}</div>
 
                     </div>
-                    <!-- ./col -->
+                    <!-- /.img_description -->
 
-                   
-    
-                    <div class="thumbnails col-4">
-                        <img :src="place[index].image" class="thumb" v-for="(element, index) in place"  :class="counter === index ? 'active' : ''">
-
-                        <div class="navigator d-flex flex-column"> 
-
-                            <div class="prev" @click="prevImage"> 
-                                <i class="fa-solid fa-chevron-up"></i> 
-                            </div> 
-                            <!-- /.prev -->
-    
-                            <div class="next" @click="nextImage"> 
-                                <i class="fa-solid fa-chevron-down"></i>     
-                            </div> 
-                            <!-- /.next -->
-                        </div> 
-                        <!-- /.navigator -->
-
-                    </div>
-                    <!-- /.thumbnails -->
-    
                 </div>
-                <!-- /.row -->
+                <!-- ./col -->
+
+                <div class="thumbnails col-2 position-relative">
+                    <img :src="place[index].image" class="thumb" v-for="(element, index) in place"  :class="counter === index ? 'active' : ''">
+
+                    <div class="navigator d-flex justify-content-between position-absolute flex-column align-items-center"> 
+
+                        <div class="prev" @click="prevImage"> 
+                            <i class="fa-solid fa-chevron-up"></i> 
+                        </div> 
+                        <!-- /.prev -->
+
+                        <div class="next" @click="nextImage"> 
+                            <i class="fa-solid fa-chevron-down"></i>     
+                        </div> 
+                        <!-- /.next -->
+                    </div> 
+                    <!-- /.navigator -->
+
+                </div>
+                <!-- /.thumbnails -->
+    
+               
 
             </div>
             <!-- /.card -->
@@ -74,9 +71,6 @@
     </div>
     <!-- /#app -->
     
-
-
-
     <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
     <script src="./assets/js/app.js"></script>
 </body>
