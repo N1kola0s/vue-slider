@@ -19,10 +19,9 @@ img{
 
 }
 
-.container .card {
+.container>.card {
     border: 1px solid lightgray;
     box-shadow: 0 0 10px #ababab;
-    height: 100%;
 }
 
 .img_main{
