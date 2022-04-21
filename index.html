@@ -16,6 +16,67 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer' />
 </head>
 <body>
+
+    <div id="app">
+
+        <div class="container">
+
+            <div class="card">
+
+                <div class="row">
+
+                    <div class="col-8 ">
+
+                        <img class="img_main position-absolute" :src="place[counter].image" alt="'photo' + place[counter].title">
+                        <!-- /.img_main -->
+
+                        <div class="img_description position-relative text-white">
+                            <h4>{{place[counter].title}}</h4>
+                            <div>{{place[counter].text}}</div>
+    
+                        </div>
+                        <!-- /.img_description -->
+
+                    </div>
+                    <!-- ./col -->
+
+                   
+    
+                    <div class="thumbnails col-4">
+                        <img :src="place[index].image" class="thumb" v-for="(element, index) in place"  :class="counter === index ? 'active' : ''">
+
+                        <div class="navigator d-flex flex-column"> 
+
+                            <div class="prev" @click="prevImage"> 
+                                <i class="fa-solid fa-chevron-up"></i> 
+                            </div> 
+                            <!-- /.prev -->
+    
+                            <div class="next" @click="nextImage"> 
+                                <i class="fa-solid fa-chevron-down"></i>     
+                            </div> 
+                            <!-- /.next -->
+                        </div> 
+                        <!-- /.navigator -->
+
+                    </div>
+                    <!-- /.thumbnails -->
+    
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.card -->
+
+        </div>
+        <!-- /.container -->
+    
+    </div>
+    <!-- /#app -->
+    
+
+
+
     <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
     <script src="./assets/js/app.js"></script>
 </body>

@@ -1,0 +1,29 @@
+img{ 
+    max-width: 100%; 
+} 
+
+.container{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    
+
+}
+
+.container .card {
+    border: 1px solid lightgray;
+    box-shadow: 0 0 10px #ababab;
+    max-width: 1200px;
+    /* height: 400px; */
+}
+
+
+.thumbnails .thumb{
+    height: calc(100% / 5);
+}
+
+.active{ 
+    border: 4px solid white; 
+}
